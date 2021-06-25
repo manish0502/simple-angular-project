@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductlistComponent } from './productlist/productlist.component';
 import { DataListComponent } from './data-list/data-list.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { FeedbackNewComponent } from './feedback-new/feedback-new.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AgGridModule } from 'ag-grid-angular';
     FeedbackComponent,
     PageNotFoundComponent,
     ProductlistComponent,
-    DataListComponent
+    DataListComponent,
+    FeedbackNewComponent
   ],
   imports: [
     CommonModule,

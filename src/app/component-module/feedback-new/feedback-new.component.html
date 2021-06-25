@@ -1,0 +1,43 @@
+ 
+ <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2>Feedback & Rate Us</h2>
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+     
+        <img src="https://img.icons8.com/carbon-copy/100/000000/feedback.png"/>
+      </div>
+  
+      <!-- Login Form -->
+      <form  #feedbackForm="ngForm" (ngSubmit)="userFeedback($event,feedbackForm)">
+        <input type="text" id="login" class="fadeIn second" name="name" placeholder="Enter Name" 
+        [ngClass]="{ 'is-invalid': name.touched && name.invalid }"
+        #name="ngModel"
+        ngModel required>
+        <span class="invalid-feedback">Please enter your name.</span>
+        
+        <input type="text" id="email" class="fadeIn third" name="email" 
+        [ngClass]="{ 'is-invalid': email.touched && email.invalid }" #email="ngModel"
+        placeholder="Enter Email" ngModel required>
+        <span class="invalid-feedback">Kindly enter your Email.</span>
+
+        <input type="text" id="contact" class="fadeIn third" name="contact" 
+        [ngClass]="{ 'is-invalid': contact.touched && contact.invalid }" #contact="ngModel"
+        placeholder="Contact details" ngModel required>
+        <span class="invalid-feedback">Enter contact details.</span>
+
+        <input type="text" id="message" class="fadeIn third" name="message" 
+        [ngClass]="{ 'is-invalid': message.touched && message.invalid }" #message="ngModel"
+        placeholder="Message" ngModel required>
+        <span class="invalid-feedback">Write Us about Our Work.</span>
+  
+        <input type="submit" class="fadeIn fourth" value="Submit" [disabled]="feedbackForm.invalid">
+      </form>
+
+  
+    
+  
+    </div>
+  </div>

@@ -1,3 +1,4 @@
+import { FeedbackNewComponent } from './feedback-new/feedback-new.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { DataListComponent } from './data-list/data-list.component';
 import { ProductlistComponent } from './productlist/productlist.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: '' , redirectTo:'/cmodule/login' , pathMatch:'full'},
   { path: 'login', component:LoginComponent},
   { path: 'datalist', component:DataListComponent},
-  { path: 'feedback', component: FeedbackComponent },
+  { path: 'feedback', component: FeedbackNewComponent },
+
   { path:'productlist' , component:ProductlistComponent},
   { path:'**' , component:PageNotFoundComponent}
 ];
